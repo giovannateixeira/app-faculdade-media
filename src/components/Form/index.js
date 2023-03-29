@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { TextInput, View, Text, TouchableOpacity } from "react-native";
-import styles from './style';
-import Result from './Result';
+import styles from "./Style";
+import Result from "./Result";
 
 export default function Form() {
     const [mediaEtapa1, setMediaEtapa1] = useState(null)
@@ -19,9 +19,9 @@ export default function Form() {
 
     function resultado(media) {
         if (media >= 7) {
-            setMsgResultado("APROVADO")
+            setMsgResultado("APROVADO!!!")
         } else if (media >= 3 && media < 7) {
-            setMsgResultado("PROVA FINAL")
+            setMsgResultado("PROVA FINAL!!")
         } else {
             setMsgResultado("REPROVADO!")
         }
@@ -30,15 +30,16 @@ export default function Form() {
     function validacaoMedia() {
         if (mediaEtapa1 != null && mediaEtapa2 != null) {
             let mediaEtapa1Format = mediaEtapa1.replace(",", ".")
-            let mediaEtapa2Format = mediaEtapa2.replace(",", ".")
+            let mediaEtapa2Format = mediaEtapa1.replace(",", ".")
+
             if (mediaEtapa1Format >= 0 && mediaEtapa1Format <= 10 && mediaEtapa2Format >= 0 && mediaEtapa2Format <= 10) {
                 calcularMedia(mediaEtapa1Format, mediaEtapa2Format)
                 setMediaEtapa1(null)
                 setMediaEtapa2(null)
-                setTextButton("Calcular novamente")
                 setMsgCalculo(null)
+                setTextButton("Calcular Novamente")
             } else {
-                setMsgCalculo("Valor inválido")
+                setMsgCalculo("Valor inválido!")
                 setMediaEtapa1(null)
                 setMediaEtapa2(null)
                 setTextButton("Calcular")
@@ -74,14 +75,14 @@ export default function Form() {
                     />
 
                     <TouchableOpacity onPress={() => validacaoMedia()}>
-                        <Text style={styles.button}>{textButton}</Text>
+                        <Text style={styles.buttom}>{textButton}</Text>
                     </TouchableOpacity>
                 </View>
                 :
                 <View>
                     <Result media={media} msgResultado={msgResultado} />
                     <TouchableOpacity onPress={() => validacaoMedia()}>
-                        <Text style={styles.button}>{textButton}</Text>
+                        <Text style={styles.buttom}>{textButton}</Text>
                     </TouchableOpacity>
                 </View>
             }
