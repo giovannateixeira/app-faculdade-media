@@ -1,18 +1,18 @@
-import { StyleSheet } from "react-native";
+import {StyleSheet} from "react-native";
 
 const styles = StyleSheet.create({
     form: {
-        backgroundColor: '#FFF',
+        backgroundColor: '#fff',
         padding: 30,
         height: '100%',
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
     },
     alerta: {
-        backgroundColor: '#F00',
+        backgroundColor: "#f00",
         fontSize: 20,
-        textAlign: 'center',
-        color: '#FFF',
+        textAlign: "center",
+        color: "#fff",
         marginBottom: 20,
         padding: 10,
         borderRadius: 5,
@@ -25,15 +25,15 @@ const styles = StyleSheet.create({
     input: {
         fontSize: 20,
         borderRadius: 10,
-        backgroundColor: '#DDD',
+        backgroundColor: '#ddd',
         padding: 10,
         marginBottom: 20,
     },
-    button: {
+    buttom: {
         fontSize: 20,
-        color: '#FFF',
+        color: '#fff',
         textAlign: 'center',
-        backgroundColor: '#F90',
+        backgroundColor: '#f90',
         padding: 10,
         borderRadius: 10,
         marginBottom: 20,
