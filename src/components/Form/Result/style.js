@@ -1,23 +1,24 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     resultadoMedia: {
-        marginBotton: 20,
+        marginBottom: 20,
     },
     info: {
         textAlign: 'center',
-        fontSize: 15,
+        fontSize: 18,
         marginBottom: 10,
     },
     media: {
         backgroundColor: '#DDD',
-        fontSize:30,
+        fontSize: 38,
         textAlign: 'center',
+        fontWeight: 'bold',
         padding: 10,
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
     },
-    msgResultado:{
+    msgResultado: {
         fontSize: 22,
         color: '#FFF',
         textAlign: 'center',
@@ -25,16 +26,15 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 10,
     },
-    corReprovado:{
+    corResprovado: {
         backgroundColor: '#D00',
     },
-    corProvaFinal:{
+    corProvaFinal: {
         backgroundColor: '#FB0',
     },
-    corAprovado:{
+    corAprovado: {
         backgroundColor: '#32CD32',
-    } 
-
+    }
 });
 
 export default styles
